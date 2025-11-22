@@ -1,0 +1,107 @@
+/start WTML v1/
+T!/WTML 语言标准 v1.0/
+1*概述
+<B><#003366><1.2>WTML（Web Text Markup Language）</B>是一种轻量级标记语言，用于构建具有交互性、样式控制和动态内容的网页或文档。
+/up/
+2*文档结构
+2.1 文件声明
+<ocl>
+1./start WTML v1/
+2.必须位于文件开头，标识 WTML 版本
+</ocl>
+2.2 注释
+使用反引号包裹注释内容
+/p
+3*文本格式化
+3.1 字体样式
+<B><#006600>语法：</B><K><#000000><1><justify><级别><样式><颜色><透明度><字体>"文本"</justify>
+<ovl>
+1.级别：<1> 到 <10>
+2.样式：<A> 正体，<B> 粗体，<I> 斜体，<K> 链接
+3.颜色：<#000000> 或 <C,0,S,0,L,0> 或 <R,0,G,0,B,0>
+4.透明度：<100%T>
+5.字体：<字体名称>
+</ovl>
+/p
+3.2 对齐方式
+<ucl>
+
+<left>左对齐</left>
+
+<right>右对齐</right>
+
+<center>居中</center>
+
+<justify>两端对齐</justify>
+
+</ucl>
+/p
+3.3 特殊文本效果
+
+效果	语法	示例
+删除线	~~~文本~~~	~~~删除线~~~
+涂黑	~~~~文本~~~~	~~~~涂黑~~~~
+上标	x^2?	x^2?
+下标	H~2~?O	H~2~?O
+提及	@用户名	@developer
+/p		
+4*交互组件		
+4.1 按钮		
+[按钮示例]=button		
+-?=<set demo_button=1>		
+点击按钮执行动作		
+/p		
+4.2 输入框		
+[姓名]{border:1px solid #ccc}{text}{请输入姓名}{user_name}{random123}=input box		
+/p		
+4.3 进度条		
+[下载进度]{75%}{正在下载...}{#FFFFFF}{#007ACC}{#F0F0F0}{2}{5}{10}		
+/p		
+5*脚本与扩展		
+5.1 JavaScript 嵌入		
+++JavaScript++={		
+console.log("WTML 标准演示");		
+function demo() {		
+text
+return "Hello WTML";
+}
+}
+/p
+5.2 扩展库
+dr{https://example.com/wtml-libs}
+&&&=<lib:chart type="bar">
+/p
+6*列表与表格
+6.1 有序列表
+<ocl>
+1.第一项
+2.第二项
+3.第三项
+</ocl>
+/p
+6.2 表格示例
+
+组件	语法	描述
+按钮	[名称]=button	创建可点击按钮
+开关	[名称]=on	创建切换开关
+气泡	[内容]{样式}=bubble	创建提示气泡
+/p		
+7*特殊模式		
+7.1 主题模式		
+[夜晚模式]=on		
+-?=<night>		
+开启夜间主题		
+/p		
+7.2 环境模式		
+weather={sunny}		
+season={spring}		
+设置天气和季节效果		
+/p		
+8*图形与图标		
+8.1 SVG 图标		
+SVG={<svg width="100" height="100"><circle cx="50" cy="50" r="40" fill="#007ACC"/></svg>}		
+/p		
+9*语义说明		
+<pleft><I><#666666>所有未指定的样式或属性将使用默认值。变量列表支持 NaN、infinity、-infinity 作为顺序标识。交互组件可通过 -?= 绑定行为。</I></pleft>		
+/p		
+<center><size=12><#999999>WTML Standard v1.0 | 生成日期：2024年</size></center> <center>[下载本标准]=button -?=<down link="https://example.com/wtml-standard.pdf" size="1.2MB" name="WTML标准v1.0"> </center>
