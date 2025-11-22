@@ -48,16 +48,34 @@ SVG={}
 `植入svg图标`
 PNG={}
 `植入png图标`
+video={}
+`植入视频`
+audio={}
+`植入音频`
+canvas={}
+`植入画布`
+markdown={}
+`植入md`
 dr{}
 `导入代码库网址,&&&=<代码库代码格式>就可以使用这个代码库了`
 mmm={}
 `在括号里面的代码会打开怪异模式。`
+plain text={}
+`通过连接Unicode，将括号中的wtml转换为可读的纯文本。`
+network standard support={}
+`将括号中的WTHL转换为通用网络标准，从而使所有浏览器可读`
 night
 `可以打开夜晚模式`
 weather={}
 `可以启用天气模式，如weather={rain}可以打开下雨模式`
 season={}
 `可以启用季节模式`
+ebook={}
+`可以启用电子书模式`
+high contrast={}
+`可以启用高对比度模式`
+Eye Protection={}
+`可以启用护眼模式`
 ~~~这句话将要被叉掉~~~
 ~~~~这句话将要被涂黑~~~~
 <ocl>=有序常量列表
@@ -114,3 +132,6 @@ x^2?
 [ileft]图片左对齐(这里用图片替换)[/ileft]
 [icenter]图片居中(这里用图片替换)[/icenter]
 [iright]图片右对齐(这里用图片替换)[/iright]
+Request support for WTML native syntax from the browser
+`向浏览器请求支持`
+`Web Text Markup Language`
