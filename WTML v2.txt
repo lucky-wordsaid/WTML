@@ -1,0 +1,191 @@
+/start WTML v2/
+`WTML v2 是重构后的 Web 文本标记语言，语法更统一，结构更清晰`
+
+T!/WTML v2 规范/
+`标题采用标准的 h1-h6 标签`
+<h1>这是一级标题</h1>
+<h2>这是二级标题</h2>
+<h3>这是三级标题</h3>
+`依此类推,最小为六级标题<h6>`
+
+/up/
+
+<text size="1" weight="A" color="#000000" opacity="100%" font="microsoft yahei">"Hello, world!"</text>
+`<text>元素用于文本样式：
+  size: 1-10级字体大小
+  weight: A=正体, B=粗体, I=斜体, K=链接体
+  color: 十六进制颜色或rgb(r,g,b)或hsl(h,s,l)
+  opacity: 透明度百分比
+  font: 字体名称
+  所有属性均可省略，使用默认值`
+
+<a href="https://www.example.com">这是一个URL链接</a>
+
+<hr>
+`水平分割线`
+
+<br>
+`换行`
+
+<p></p>
+`段落空行`
+
+<script>
+// 这是 JavaScript 代码
+function changeText() {
+    document.getElementById("demo").innerText = "你好，JavaScript！";
+}
+</script>
+`脚本标签直接嵌入JavaScript`
+
+<scroll length="10">
+`滑动页面，length为滑动长度`
+
+<extension name="custom" code="set a=1">
+`扩展功能，name为扩展名，code为执行代码`
+
+<control type="button" action="set a=0">这是一个按钮</control>
+`交互控件：
+  type: button/switch/input/slider/knob/bubble/window
+  action: 触发时执行的代码（按钮）
+  on-action/off-action: 开关的打开/关闭动作
+  prompt: 输入框的提示文字
+  var: 关联的变量名`
+
+<control type="switch" on-action="set a=1" off-action="set a=0">这是一个开关</control>
+
+<control type="bubble" style="样式">这是一个气泡</control>
+
+<control type="window" style="样式">这是一个窗口</control>
+
+<control type="knob" style="样式" var="volume">这是一个旋钮</control>
+
+<control type="slider" style="样式" min="0" max="100" var="value">这是一个滑块</control>
+
+<control type="input" prompt="请输入" var="answer" validate="text">这是一个输入框</control>
+
+<sprite style="样式" voice="声音文件">这是一个角色</sprite>
+
+<progress value="50%" text="加载中..." text-color="#fff" fill-color="#007bff" bg-color="#e9ecef" border="1px" radius="5px" margin="10px">这是一个进度条</progress>
+
+<download href="https://example.com/file.zip" size="1MB" name="示例下载"></download>
+
+<blockquote>这是一个引用块</blockquote>
+
+<media type="svg" src="data.svg"></media>
+<media type="png" src="image.png"></media>
+<media type="video" src="video.mp4"></media>
+<media type="audio" src="audio.mp3"></media>
+<media type="canvas" width="800" height="600"></media>
+
+<embed type="markdown" src="content.md"></embed>
+
+<library url="https://code.lib/wtml"></library>
+`导入代码库，使用<extension name="库名.函数">调用`
+
+<mode type="weird">
+`怪异模式，括号内代码使用非标准解析`
+</mode>
+
+<convert to="plaintext">
+`将内容转换为纯文本`
+</convert>
+
+<convert to="webstandard">
+`转换为通用网络标准`
+</convert>
+
+<mode type="night"></mode>
+`夜间模式`
+
+<mode type="weather" param="rain"></mode>
+`天气模式，param=rain/snow/sunny等`
+
+<mode type="season" param="autumn"></mode>
+`季节模式`
+
+<mode type="ebook"></mode>
+`电子书模式`
+
+<mode type="highcontrast"></mode>
+`高对比度模式`
+
+<mode type="eyeprotection"></mode>
+`护眼模式`
+
+<del>这句话将要被删除</del>
+
+<blackout>这句话将要被涂黑</blackout>
+
+<ol type="constant">
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+`有序常量列表，type=constant表示内容不可变`
+
+<ol type="variable">
+<li var="item1">变量项1</li>
+<li var="item2">变量项2</li>
+<li order="infinity">始终在末尾</li>
+<li order="-infinity">始终在开头</li>
+<li order="NaN">随机位置</li>
+</ol>
+`有序变量列表，可使用变量和特殊顺序`
+
+<ul type="constant">
+<li>无序项1</li>
+<li>无序项2</li>
+<li>无序项3</li>
+</ul>
+
+<ul type="variable">
+<li var="item1">变量项</li>
+<li var="item2">另一变量项</li>
+</ul>
+
+<table>
+<thead>
+<tr><th>表头1</th><th>表头2</th></tr>
+</thead>
+<tbody>
+<tr><td>内容1</td><td>内容2</td></tr>
+<tr><td>内容3</td><td>内容4</td></tr>
+</tbody>
+</table>
+
+<dropcap>首</dropcap>字下沉效果
+
+<align value="left">左对齐文本</align>
+<align value="right">右对齐文本</align>
+<align value="center">居中对齐文本</align>
+<align value="justify">两端对齐文本</align>
+
+<indent side="left" amount="2em">左缩进文本</indent>
+<indent side="right" amount="2em">右缩进文本</indent>
+
+<text size="10px">10px字体</text>
+<text size="20px">20px字体</text>
+<text size="1.5em">相对大小字体</text>
+
+<footnote id="1">脚注内容</footnote>
+`在文中使用<ref id="1">引用脚注`
+
+H<sub>2</sub>O
+`下标`
+
+x<sup>2</sup>
+`上标`
+
+<mention user="somebody">@somebody</mention>
+`提及用户`
+
+<image src="photo.jpg" align="left"></image>
+<image src="photo.jpg" align="center"></image>
+<image src="photo.jpg" align="right"></image>
+
+<request standard="wtml-native">
+`向浏览器请求WTML原生语法支持`
+</request>
+
+`Web Text Markup Language v2 - 统一、清晰、可扩展`
