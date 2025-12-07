@@ -1,0 +1,210 @@
+/start WTML v2.2/
+`WTML v2.2 - 保持原味，优化统一`
+`尊重作者的设计哲学，但减少不必要的混乱`
+
+T!/WTML v2.2 规范/
+`尊重键盘梗文化，但让语法更一致`
+
+# 这是一级标题
+## 这是二级标题
+### 这是三级标题
+`标题使用 # 符号，保持Markdown风格`
+
+/up/
+
+[A#000 100% Yahei]Hello, world!
+`字体样式简写：[样式]文本
+  A=正体 B=粗体 I=斜体 K=链接
+  颜色、透明度、字体可省略用默认值`
+
+[https://example.com](这是一个链接)
+`链接格式：[URL](描述)`
+
+---
+`三个-为分割线`
+
+/p/
+`空行标记`
+
+{{js
+// JavaScript代码
+function demo() {
+    alert('Hello');
+}
+}}
+`代码块：{{语言 代码}}`
+
+<if asdfghjkl>10</if>
+`滑动效果：<if asdfghjkl>距离</if>
+  尊重作者玩梗，键盘上一划到底的动作代表滑动`
+
+{{ext set a=1}}
+`扩展调用：{{ext 代码}}`
+
+[btn 按钮名称] {{click set a=0}}
+`按钮：[btn 名称] {{click 动作}}`
+
+[switch 开关] {{on set a=1}} {{off set a=0}}
+`开关：[switch 名称] {{on 打开动作}} {{off 关闭动作}}`
+
+[bubble 气泡内容]{style=样式}
+`气泡：[bubble 内容]{样式参数}`
+
+[window 窗口内容]{style=样式}
+`窗口：[window 内容]{样式参数}`
+
+[knob 旋钮名称]{min=0 max=100 step=1}
+`旋钮：[knob 名称]{参数}`
+
+[slider 滑块名称]{min=0 max=100 value=50}
+`滑块：[slider 名称]{参数}`
+
+[input 请输入]{type=text var=answer}
+`输入框：[input 提示]{类型 var=变量}`
+
+[sprite 角色名]{style=样式 voice=声音}
+`角色：[sprite 名称]{参数}`
+
+[progress 50%]{text=加载中... color=blue}
+`进度条：[progress 百分比]{参数}`
+
+[down https://example.com/file.zip 示例文件 1MB]
+`下载：[down URL 文件名 大小]`
+
+> 引用内容
+`引用：> 内容`
+
+![svg data.svg]
+`SVG：![svg 数据/URL]`
+
+![png image.png]
+`PNG：![png URL]`
+
+![video video.mp4]
+`视频：![video URL]`
+
+![audio sound.mp3]
+`音频：![audio URL]`
+
+![canvas 800x600]
+`画布：![canvas 宽x高]`
+
+{{md
+# Markdown标题
+- 列表项
+}}
+`Markdown块：{{md 内容}}`
+
+@lib https://lib.example.com
+`导入库：@lib URL`
+
+{{weird
+奇怪模式代码
+}}
+`怪异模式：{{weird 代码}}`
+
+{{plain
+WTML转纯文本
+}}
+`纯文本转换：{{plain 内容}}`
+
+{{standard
+WTML转标准HTML
+}}
+`标准转换：{{standard 内容}}`
+
+*night*
+`夜间模式：*night*`
+
+*weather rain*
+`天气模式：*weather 类型*`
+
+*season autumn*
+`季节模式：*season 季节*`
+
+*ebook*
+`电子书模式：*ebook*`
+
+*highcontrast*
+`高对比模式：*highcontrast*`
+
+*eyepro*
+`护眼模式：*eyepro*`
+
+~~删除线文本~~
+`删除线：~~内容~~`
+
+##涂黑文本##
+`涂黑：##内容##`
+
+1. 第一项
+2. 第二项
+3. 第三项
+`有序常量列表：数字. 内容`
+
+1. $item1
+2. $item2
+inf. $item3
+-inf. $item4
+?rand. $item5
+`有序变量列表：
+  inf. = 放末尾
+  -inf. = 放开头
+  ?rand. = 随机位置`
+
+- 项目一
+- 项目二
+- 项目三
+`无序列表：- 内容`
+
+- $var1
+- $var2
+- $var3
+`无序变量列表：- $变量`
+
+| 表头1 | 表头2 |
+|-------|-------|
+| 单元格1 | 单元格2 |
+`表格保持Markdown语法`
+
+<首>字下沉效果
+`首字下沉：<首字>其余文字`
+
+<left>左对齐文本</left>
+<right>右对齐文本</right>
+<center>居中文本</center>
+<justify>两端对齐文本</justify>
+`对齐标签保持原样`
+
+<pleft>左缩进文本</pleft>
+<pright>右缩进文本</pright>
+`缩进标签保持原样`
+
+[size=16]16px文字</size>
+`字号：[size=数字]文字[/size]`
+
+脚注^1^
+`脚注：^编号^`
+
+H~2~O
+`下标：~内容~`
+
+x^2^
+`上标：^内容^`
+
+@用户名
+`提及：@用户名`
+
+[ileft][img image.png][/ileft]
+`图片对齐：[ileft]图片[/ileft]`
+
+[icenter][img image.png][/icenter]
+`居中图片`
+
+[iright][img image.png][/iright]
+`右对齐图片`
+
+?wtml-native
+`请求支持：?功能名`
+
+`Web Text Markup Language v2.2 - 保持趣味，优化统一`

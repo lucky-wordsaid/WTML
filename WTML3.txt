@@ -1,0 +1,242 @@
+/start WTML v3.0/
+`WTML v3.0 - 新增功能，保持趣味，更强大`
+`在保持轻量语法的同时，增加实用功能`
+
+T!/WTML v3.0 新特性/
+
+# 新功能展示
+## 让WTML更加强大有趣
+
+/up/
+
+[A#3898E0 100%]欢迎使用WTML v3.0[/A]
+`新增：样式标签可闭合 [/标签]`
+
+[gradient #FF6B6B to #4ECDC4]渐变色文字[/gradient]
+`渐变色文字：[gradient 起始色 to 结束色]文字[/gradient]`
+
+[blur 5px]模糊效果文字[/blur]
+`文字特效：[blur 模糊度]、[glow 发光]、[shadow 阴影]`
+
+[typewriter 50ms]逐字打印效果...[/typewriter]
+`打字机效果：[typewriter 速度]文字[/typewriter]`
+
+[sparkle]闪烁特效文字[/sparkle]
+`粒子特效：[sparkle]、[firework]、[confetti]`
+
+[https://example.com](新窗口打开){target=_blank}
+`链接新增属性：{target=_blank rel=nofollow class=样式}`
+
+---
+`分割线可自定义：---{color=#ccc width=80% height=2px}`
+
+/p{count=2}/
+`空行可指定行数：/p{count=数字}/`
+
+{{js auto
+// 自动执行的JS
+console.log('页面加载时执行');
+}}
+`自动执行JS：{{js auto 代码}}`
+
+{{py
+# Python代码支持（通过WASM）
+def fibonacci(n):
+    return n if n <= 1 else fibonacci(n-1) + fibonacci(n-2)
+print(fibonacci(10))
+}}
+`新增语言支持：{{py}}、{{lua}}、{{sql}}等`
+
+<if asdfghjkl>10 {ease=bounce duration=1s}</if>
+`滑动增强：{ease=缓动函数 duration=时间}`
+
+{{ext ai 分析这段文本}} 
+`AI扩展：{{ext ai 指令}}，调用内置AI功能`
+
+{{ext voice 请朗读这段文字}}
+`语音合成：{{ext voice 文本}}`
+
+[btn 🌈 彩虹按钮] {{click alert('点击')}} {style=3d color=rainbow}
+`按钮增强：支持emoji和3D样式`
+
+[switch 智能开关] {{on 打开灯光}} {{off 关闭灯光}} {auto=schedule}
+`智能开关：{auto=schedule/sensor/weather}`
+
+[bubble AI助手]{ai=true memory=session}你好，我能帮你什么？
+`AI气泡：{ai=true}开启对话AI`
+
+[window 实时数据]{src=https://api.example.com/data refresh=10s}
+`动态窗口：{src=数据源 refresh=刷新间隔}`
+
+[knob 音乐均衡器]{type=audio min=-12 max=12 freq=bands}
+`音频旋钮：连接Web Audio API`
+
+[slider 音量]{type=vertical range=0,100,200 snap=10}
+`滑块增强：{type=vertical/horizontal range=范围 snap=对齐值}`
+
+[input 智能输入]{ai=suggest voice=true lang=zh-CN}
+`智能输入框：AI补全、语音输入`
+
+[sprite 虚拟助手]{ai=true emotion=happy interact=true}
+`AI角色：{emotion=情绪 interact=可交互}`
+
+[progress 75%]{animation=flow reverse=true label=动态进度}
+`动画进度条：{animation=效果 reverse=反向}`
+
+[down https://example.com/large.zip 大文件下载]{resume=true chunks=5}
+`断点续传下载：{resume=true chunks=分片数}`
+
+> 智能引用
+{ai=summarize source=https://example.com}
+`AI增强引用：自动总结来源内容`
+
+![svg interactive.svg]{click=zoom hover=highlight}
+`交互式SVG：支持点击、悬停事件`
+
+![video live.mp4]{live=true chat=side}
+`直播视频：{live=true chat=弹幕位置}`
+
+![3d model.glb]{rotate=true zoom=true background=#000}
+`3D模型：支持.glb/.gltf格式`
+
+![map 北京]{zoom=12 markers=王府井,天安门 layer=satellite}
+`地图嵌入：{zoom=级别 markers=标记}`
+
+{{md ai
+# AI增强Markdown
+请将以下内容优化为更专业的报告：
+原始内容...
+}}
+`AI辅助写作：{{md ai 指令}}`
+
+@lib https://lib.example.com/ai.wtml {version=1.2 cache=true}
+`版本化库导入：{version=版本 cache=缓存}`
+
+{{weird quantum
+量子怪异模式
+叠加态文字
+}}
+`多重怪异模式：{{weird 模式名 代码}}`
+
+{{plain speech
+转换为语音友好的纯文本
+}}
+`语音优化纯文本`
+
+{{standard pwa
+转换为PWA应用
+}}
+`PWA应用转换`
+
+*night auto{schedule=19:00-7:00}*
+`自动夜间模式：根据时间或环境光切换`
+
+*weather snow{accumulate=true wind=medium}*
+`增强天气：积雪效果、风力`
+
+*season winter{holiday=christmas temperature=-5℃}*
+`季节增强：节日特效、温度模拟`
+
+*ebook{font=book fontsize=16 theme=sepia}*
+`增强阅读模式：字体、主题、翻页动画`
+
+*highcontrast{theme=darkblue custom=#000,#FFF,#00F}*
+`自定义高对比度主题`
+
+*eyepro reminder{interval=20min exercise=true}*
+`护眼提醒：定时休息、眼保健操`
+
+~~可恢复删除~~{undo=true timeout=30s}
+`可恢复删除：{undo=true timeout=恢复时间}`
+
+##可解密涂黑##{password=123456 hint=生日}
+`密码涂黑：需要密码才能查看`
+
+1. ✅ 任务一 {done=true time=2024-01-01}
+2. ⏳ 任务二 {progress=50% due=2024-01-15}
+3. 📝 任务三 {priority=high}
+`任务列表：支持状态、进度、截止日期`
+
+1. $task1 {assign=张三 status=pending}
+2. $task2 {assign=李四 status=done}
+`增强变量列表：元数据支持`
+
+- [ ] 待办事项一 {remind=明天9点}
+- [x] 已完成事项 {done=今天}
+`待办事项列表：[ ]未完成 [x]完成`
+
+| 姓名 | 年龄 | 分数 |
+|------|------|------|
+| 张三 | {input type=number min=0 max=100} | {calc avg(分数)} |
+| 李四 | 22 | 95 |
+`可编辑表格：{input}输入框 {calc}计算公式`
+
+<首字3D>下沉特效</首字>
+`3D首字下沉：<首字特效>`
+
+<marquee speed=slow direction=right>跑马灯文字</marquee>
+`跑马灯效果：<marquee speed=速度 direction=方向>`
+
+<flip front=正面 back=背面>悬停翻转</flip>
+`卡片翻转效果：<flip front=正面 back=背面>`
+
+<countup start=0 end=1000 duration=3s>计数器动画</countup>
+`数字动画：<countup start=开始 end=结束>`
+
+<particle effect=firework count=100>点击触发粒子效果</particle>
+`粒子系统：<particle effect=效果 count=数量>`
+
+<left fade>渐入左对齐</left>
+<right bounce>弹跳右对齐</right>
+`对齐动画：{fade/slide/bounce/rotate}`
+
+<pleft level=2>二级左缩进</pleft>
+<pright level=3>三级右缩进</pright>
+`多级缩进：level=级别`
+
+[size=24 animate=1s]动画改变大小的文字[/size]
+`动画字号：[size=数字 animate=时间]`
+
+脚注^AI^{ai=expand auto=true}
+`AI脚注：自动扩展相关内容`
+
+H~下标~{small=0.8 color=gray}
+`增强下标：可自定义大小颜色`
+
+x^上标^{large=1.2 offset=top}
+`增强上标：可自定义偏移`
+
+@AI助手 {role=assistant status=online}
+`AI提及：{role=角色 status=状态}`
+
+[ileft zoom][img cat.jpg][/ileft]{hover=放大镜}
+`图片增强：{hover=效果 zoom=缩放比}`
+
+[igallery][img 1.jpg][img 2.jpg][img 3.jpg][/igallery]
+`图片画廊：[igallery]多个图片[/igallery]`
+
+?wtml-native {priority=high propose=2024-Q2}
+`增强请求：{priority=优先级 propose=提案时间}`
+
+<game type=2048>2048小游戏</game>
+`内置小游戏：<game type=类型>`
+
+<quiz 
+question=WTML是什么？
+options=A.语言|B.食物|C.动物
+answer=A
+explanation=Web Text Markup Language
+>测试你的知识</quiz>
+`测验组件：<quiz question=问题 options=选项 answer=答案>`
+
+<paint size=800x600 tools=brush,eraser,fill save=true>
+绘图画板
+</paint>
+`绘图板：<paint size=尺寸 tools=工具>`
+
+<music player=true playlist=url1,url2 volume=80>
+在线音乐播放器
+</music>
+`音乐播放器：<music player=true playlist=列表>`
+
+`Web Text Markup Language v3.0 - 更智能、更交互、更有趣`
